@@ -30,13 +30,44 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+A stateful component is a class component created by extending the React.Component class. 
+class example extends React.Component {
+constructor() { super(); this.state = { message: "Hello world" }; }
+ render() {
+    return <div>Hello, I am Example Component</div>;
+  }
+} 
+A stateful component is dependent on it’s state object and can change it’s own state. The component re-renders based on changes to it’s state, and may pass down properties of it’s state to child components as properties on a props object. 
+
+
 2. Describe the different phases of the component lifecycle.
+
+*Render Phase - is pure and has no side effects. It can be paused, stopped or restarted. It mounts and updates elements on the DOM.
+*Pre-Commit phase - Can read the DOM.
+*Commit Phase - Can work with the DOM, run side effects and schedule updates.
+
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+*Mounting -  Initial data you want access to will be defined on the constructor of this phase. Your render method is invoked and componentDidMount gets called as well.
+*Updating - you’re updating component data.   
+setState can be used to change the component’s state data, forcing a call to render.
+shouldComponentUpdate is a method one could use here to stop a component from calling render if necessary.
+*Un-Mounting - Component is removed from the screen.
+componentWillUnmount is called and can be used for any clean up you may need to do.
+
+
 4. Define stateful logic.
 
+Stateful logic is logic that is built into a component. It can be a function that handles a click event or maybe a function that sets toggle state, or even a function that formats data before it gets displayed. Usually, this kind of logic deals with state in the component.
+
+
 5. Describe how to test a React component with React Testing Library.
+
+Arrange, act, assert. First, we “arrange” our test by setting up our code such that it can be tested. Then, we “act” - calling a method or function that returns a result of interest to our test. Finally, with that return we “assert” if our expected return matched the actual return.
+
+
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
