@@ -83,7 +83,7 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 ### Task 2: Project Requirements
 
-Your finished project must include all of the following requirements: 
+Your finished project must include all of the following requirements:
 
 #### Plant List
 
